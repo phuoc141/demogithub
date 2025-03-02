@@ -1,0 +1,23 @@
+					GITHUB
+- tạo 1 project trên git(dự án rỗng mình đẩy lên)
+1. Tạo GitHub repo - nơi chứa code trên git
+2. clone project này : git clone link_your_repo
+3. Viết code
+	git status (kiểm tra trạng thái file)
+	git add . (them file)
+	git commit -m "message"(tạo nội dung commit)
+	git pust origin main
+
+
+- tạo project local và đẩy lên git(có dự án sẵn mình muốn đưa code lên)
+1. Tạo GitHub repo - nơi chứa code trên git
+2. git init
+3. Viết code
+	git status (kiểm tra trạng thái file)
+	git add . (them file)
+	git commit -m "message"(tạo nội dung commit)
+      **git remote add origin https//.....
+	git pust origin master
+
+
+- https và ssh
