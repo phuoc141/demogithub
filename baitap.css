@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chính</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Chuyển đến Nội dung chính</a>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#"><img src="logo.png" alt="Logo"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <h1>Chào mừng đến với trang web của tôi</h1>
+
+    <section class="grid">
+      <img src="anh1.jpg" alt="Ảnh 1">
+      <img src="anh2.jpg" alt="Ảnh 2">
+    </section>
+
+    <section class="flex">
+      <img src="anh3.jpg" alt="Ảnh 3">
+      <img src="anh4.jpg" alt="Ảnh 4">
+    </section>
+  </main>
+
+</body>
+</html>
+
+// css
+/* Ẩn liên kết "Chuyển đến nội dung chính" trừ khi có focus */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Nhận xét kiểu cũ */
+/* li {
+  list-style: none;
+} */
+
+/* Sử dụng display: inline-block và chiều rộng khoảng 80% cho nav */
+nav {
+  display: inline-block;
+  width: 80%;
+  background-color: #eee;
+  padding: 10px;
+}
+
+/* Bộ chọn hậu duệ cho ảnh trong nav */
+nav img {
+  width: 10%;
+}
+
+/* Lớp lưới sử dụng grid hai cột, mỗi cột ~40% */
+.grid {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 20px;
+}
+
+/* Bộ chọn hậu duệ cho ảnh trong lớp .grid */
+.grid img {
+  width: 100%;
+}
+
+/* Lớp flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.flex img {
+  width: 45%;
+}
