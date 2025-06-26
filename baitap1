@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bài tập 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Liên kết chuyển đến nội dung chính -->
+  <a href="#maincontent" class="skip-link">Chuyển đến Nội dung chính</a>
+
+  <!-- Điều hướng -->
+  <nav>
+    <img src="logo.png" alt="Logo">
+    <ul>
+      <!-- <li>Trang chủ</li>
+      <li>Giới thiệu</li> -->
+      <li><a href="#">Trang chủ</a></li>
+      <li><a href="#">Sản phẩm</a></li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <!-- Nội dung chính -->
+  <main id="maincontent">
+
+    <!-- Lưới sản phẩm -->
+    <section class="luoi">
+      <div>
+        <img src="product1.jpg" alt="Sản phẩm 1">
+        <p>Tên sản phẩm 1</p>
+      </div>
+      <div>
+        <img src="product2.jpg" alt="Sản phẩm 2">
+        <p>Tên sản phẩm 2</p>
+      </div>
+      <div>
+        <img src="product3.jpg" alt="Sản phẩm 3">
+        <p>Tên sản phẩm 3</p>
+      </div>
+      <div>
+        <img src="product4.jpg" alt="Sản phẩm 4">
+        <p>Tên sản phẩm 4</p>
+      </div>
+    </section>
+
+    <!-- Flex nội dung -->
+    <section class="flex">
+      <div>
+        <h3>Thông tin 1</h3>
+        <p>Nội dung chi tiết</p>
+      </div>
+      <div>
+        <h3>Thông tin 2</h3>
+        <p>Nội dung chi tiết</p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
+// css
+
+
+/* Liên kết bỏ qua */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Điều hướng */
+nav {
+  display: inline-block;
+  width: 80%;
+  background-color: #eee;
+  padding: 10px;
+}
+
+nav img {
+  width: 10%;
+}
+
+/* Nhận xét kiểu li
+li {
+  list-style-type: none;
+  padding: 5px;
+}
+*/
+
+/* Lưới sản phẩm */
+.luoi {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 20px;
+}
+
+/* Ảnh trong lớp .luoi */
+.luoi img {
+  width: 100%;
+}
+
+/* Flex */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
