@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Bán Hàng</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+    }
+
+    header {
+      background-color: #1e90ff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background-color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: #1e90ff;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shop Của Phước</h1>
+    <nav>
+      <a href="#">Trang chủ</a>
+      <a href="#">Sản phẩm</a>
+      <a href="#">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-grid">
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Sản phẩm 1">
+        <h2>Sản phẩm 1</h2>
+        <p>Giá: 300.000đ</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Sản phẩm 2">
+        <h2>Sản phẩm 2</h2>
+        <p>Giá: 450.000đ</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Sản phẩm 3">
+        <h2>Sản phẩm 3</h2>
+        <p>Giá: 200.000đ</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Shop Của Phước. All rights reserved.</p>
+  </footer>
+</body>
+</html>
