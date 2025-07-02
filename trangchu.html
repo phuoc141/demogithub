@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Website - One Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      background-color: yellow;
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    .skip-link:focus {
+      left: 10px;
+      top: 10px;
+    }
+
+    nav.navbar {
+      display: flex;
+      background-color: #333;
+      padding: 10px;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav.navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.navbar a:hover {
+      color: #ff0;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .styled-image {
+      border: 3px solid #444;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 100%;
+    }
+
+    .styled-image:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-grid img:nth-child(odd) {
+      border-radius: 30px;
+    }
+
+    .about-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+      document.getElementById(id).classList.remove("hidden");
+    }
+
+    window.onload = () => {
+      showSection('home'); // Mặc định mở trang chủ
+    };
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to Main Content</a>
+
+  <nav class="navbar">
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('gallery')">Gallery</a>
+    <a href="#" onclick="showSection('about')">About</a>
+  </nav>
+
+  <main id="main">
+    <!-- Trang chủ -->
+    <section id="home">
+      <h1>Welcome to My Website</h1>
+      <p>This is the homepage content.</p>
+      <img src="images/img1.jpg" alt="Welcome image" class="styled-image" />
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="hidden">
+      <h1>Image Gallery</h1>
+      <div class="gallery-grid">
+        <img src="images/img1.jpg" alt="Image 1" class="styled-image" />
+        <img src="images/img2.jpg" alt="Image 2" class="styled-image" />
+        <img src="images/img3.jpg" alt="Image 3" class="styled-image" />
+        <img src="images/img4.jpg" alt="Image 4" class="styled-image" />
+        <img src="images/img5.jpg" alt="Image 5" class="styled-image" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="hidden">
+      <h1>About Me</h1>
+      <div class="about-section">
+        <img src="images/img2.jpg" alt="About image" class="styled-image" />
+        <p>Hi! I’m a web developer learning HTML and CSS.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
